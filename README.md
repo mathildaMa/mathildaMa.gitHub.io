@@ -6,7 +6,8 @@
 本文档使用一个由何江 (hejiang@tju.edu.cn) 修改的 Docsy 主题。
 使用全本地化的 javascript 库, 适合无 internet 访问(或 internet 访问延迟较大)环境部署。
 
-本项目文档模板托管在 [https://gitee.com/henry-tech/docsy-example](https://gitee.com/henry-tech/docsy-example)。
+本项目文档示例已发布在 **[https://henry-tech.gitee.io/](https://henry-tech.gitee.io/)**。
+
 
 ## 克隆 XX 项目文档
 
@@ -90,6 +91,7 @@ mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidj
     wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
 
 生成的 pdf 效果见 [getting-started.pdf](example/getting-started.pdf)。
+
 为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
 更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
 
