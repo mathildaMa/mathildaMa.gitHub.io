@@ -56,6 +56,7 @@ id = "UA-00000000-0"
 title = "Goldydocs"
 description = "A Docsy example site"
 languageName ="English"
+contentDir = "content/en"
 # Weight used for sorting.
 weight = 1
 [languages.no]

@@ -6,7 +6,7 @@
 本文档使用一个由何江 (hejiang@tju.edu.cn) 修改的 Docsy 主题。
 使用全本地化的 javascript 库, 适合无 internet 访问(或 internet 访问延迟较大)环境部署。
 
-本项目文档模板托管在 ()[https://gitee.com/henry-tech/docsy-example]。
+本项目文档模板托管在 [https://gitee.com/henry-tech/docsy-example](https://gitee.com/henry-tech/docsy-example)。
 
 ## 克隆 XX 项目文档
 
@@ -27,6 +27,53 @@ https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_
 ```bash
 npm install
 ```
+
+## 使用 PlantUML 绘制 UML 图
+
+直接在 .md 文件中书写:
+
+    <div class="plantuml">
+        @startuml
+        Alice -> Bob: Authentication Request
+        Bob --> Alice: Authentication Response
+
+        Alice -> Bob: Another authentication Request
+        Alice <-- Bob: another authentication Response
+        @enduml
+    </div>
+
+如果你本地有 plantuml server, 可以把 url 替换为本地  plantuml server 地址:
+
+    <div class="plantuml" url="http://www.plantuml.com/plantuml/img/">
+        @startuml
+        Alice -> Bob: Authentication Request
+        Bob --> Alice: Authentication Response
+
+        Alice -> Bob: Another authentication Request
+        Alice <-- Bob: another authentication Response
+        @enduml
+    </div>
+
+## 使用 mermaid 绘制 UML 图
+
+直接在 .md 文件中书写:
+
+    <div class="mermaid">
+        sequenceDiagram
+        Alice->>+John: Hello John, how are you?
+        Alice->>+John: John, can you hear me?
+        John-->>-Alice: Hi Alice, I can hear you!
+        John-->>-Alice: I feel great!
+    </div>
+
+## 生成 pdf 文档
+
+使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具:
+
+    wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
+
+为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
+更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
 
 # Docsy Example
 
