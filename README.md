@@ -42,6 +42,10 @@ npm install
         @enduml
     </div>
 
+显示如下:
+
+![](example/ex-plantuml.png)
+
 如果你本地有 plantuml server, 可以把 url 替换为本地  plantuml server 地址:
 
     <div class="plantuml" url="http://www.plantuml.com/plantuml/img/">
@@ -53,6 +57,9 @@ npm install
         Alice <-- Bob: another authentication Response
         @enduml
     </div>
+
+PlantUML 的详细使用方法见 [http://plantuml.com/zh/](http://plantuml.com/zh/)。
+也可以参考 [PlantUML_Language_Reference_Guide_zh.pdf](example/PlantUML_Language_Reference_Guide_zh.pdf)。
 
 ## 使用 mermaid 绘制 UML 图
 
@@ -66,12 +73,23 @@ npm install
         John-->>-Alice: I feel great!
     </div>
 
+显示如下:
+
+![](example/ex-mermaid.png)
+
+mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidjs.github.io/)。
+
+由于 qtwebkit 的某些问题(jquery), 
+生成的 pdf 中看不到 mermaid 绘制的 UML 图。
+推荐使用 PlantUML 绘制各种图形。
+
 ## 生成 pdf 文档
 
 使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具:
 
     wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
 
+生成的 pdf 效果见 [getting-started.pdf](example/getting-started.pdf)。
 为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
 更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
 
