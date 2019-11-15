@@ -13,8 +13,6 @@
 
 ```bash
 git clone --recurse-submodules https://gitee.com/henry-tech/docsy-example.git my-project-docs
-cd my-project-docs
-hugo server
 ```
 
 
@@ -26,7 +24,7 @@ Windows 版本可以从这里下载
 https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
 
 
-## 编写和预览
+## 文档编写和预览
 
 文档源文件在 content/ 目录下；文件可以是 .html 或 .md 后缀。您可以这样一边编写，一边预览文档：
 
