@@ -17,17 +17,39 @@ cd my-project-docs
 hugo server
 ```
 
-hugo 可以从这里下载
+
+## 下载 hugo 软件
+
+为了生成静态页面, 需要使用支持 SCSS 编译的 hugo 版本(hugo_extended_*)。
+
+Windows 版本可以从这里下载
 https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
+
+
+## 编写和预览
+
+您可以这样一边编写，一边预览文档：
+
+```bash
+cd my-project-docs
+hugo server
+```
 
 然后您就可以打开浏览器，输入网址 http://localhost:1313/ 查看文档了。
 
 
-如果你想修改和发布 SCSS 样式, 你需要安装 `PostCSS` (运行 `hugo server` 不需要这一步):
+## 产生静态文档网站
 
 ```bash
+cd my-project-docs
 npm install
+hugo
 ```
+
+这里用到了 npm, 它是 nodejs 自带的包管理软件。你需要首先下载并安装 [nodejs](https://nodejs.org)。
+
+生成的静态文档网站在 public/ 目录下。
+
 
 ## 使用 PlantUML 绘制 UML 图
 
@@ -62,6 +84,7 @@ npm install
 PlantUML 的详细使用方法见 [http://plantuml.com/zh/](http://plantuml.com/zh/)。
 也可以参考 [PlantUML_Language_Reference_Guide_zh.pdf](example/PlantUML_Language_Reference_Guide_zh.pdf)。
 
+
 ## 使用 mermaid 绘制 UML 图
 
 直接在 .md 文件中书写:
@@ -84,9 +107,10 @@ mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidj
 生成的 pdf 中看不到 mermaid 绘制的 UML 图。
 推荐使用 PlantUML 绘制各种图形。
 
+
 ## 生成 pdf 文档
 
-使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具:
+假设文档网站在预览状态下(默认 1313 端口)，可以使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具生成 pdf 文档:
 
     wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
 
@@ -94,6 +118,7 @@ mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidj
 
 为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
 更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
+
 
 # Docsy Example
 
