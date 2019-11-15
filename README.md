@@ -28,7 +28,7 @@ https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_
 
 ## 编写和预览
 
-您可以这样一边编写，一边预览文档：
+文档源文件在 content/ 目录下；文件可以是 .html 或 .md 后缀。您可以这样一边编写，一边预览文档：
 
 ```bash
 cd my-project-docs
