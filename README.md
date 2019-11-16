@@ -24,7 +24,7 @@ Windows 版本可以从这里下载
 https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
 
 
-## 文档编写和预览
+## 编写和预览
 
 文档源文件在 content/ 目录下；文件可以是 .html 或 .md 后缀。您可以这样一边编写，一边预览文档：
 
@@ -112,7 +112,7 @@ mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidj
 
     wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
 
-生成的 pdf 效果见 [getting-started.pdf](example/getting-started.pdf)。
+生成的 pdf 效果见 [getting-started.pdf](https://gitee.com/henry-tech/docsy-example/raw/master/example/getting-started.pdf)。
 
 为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
 更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
