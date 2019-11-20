@@ -1,4 +1,4 @@
-# XX 项目文档范例
+# Docsy 技术文档网站范例
 
 [Docsy](https://github.com/google/docsy) 是一个为技术文档网站制作的 Hugo 主题, 
 提供了简便的目录导航、结构及其他。
@@ -9,7 +9,10 @@
 本项目文档示例已发布在 **[https://henry-tech.gitee.io/](https://henry-tech.gitee.io/)**。
 
 
-## 克隆 XX 项目文档
+## 使用范例快速建立您的技术文档网站
+
+通过克隆本范例和子模块，您可以立即建立您的技术文档网站。
+本范例和所有子模块都托管在 gitee.com，所以速度只受限于您的 internet 连接:
 
 ```bash
 git clone --recurse-submodules https://gitee.com/henry-tech/docsy-example.git my-project-docs
@@ -18,9 +21,11 @@ git clone --recurse-submodules https://gitee.com/henry-tech/docsy-example.git my
 
 ## 下载 hugo 软件
 
-为了生成静态页面, 需要使用支持 SCSS 编译的 hugo 版本(hugo_extended_*)。
+为了生成静态页面, 您需要下载并使用支持 SCSS 编译的 hugo 版本(hugo_extended_*)。
 
-Windows 版本可以从这里下载
+hugo 的下载页面在 https://github.com/gohugoio/hugo/releases
+
+这是 Windows 版本的下载链接
 https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
 
 
@@ -36,7 +41,7 @@ hugo server
 然后您就可以打开浏览器，输入网址 http://localhost:1313/ 查看文档了。
 
 
-## 产生静态文档网站
+## 产生和发布静态文档网站
 
 ```bash
 cd my-project-docs
@@ -44,9 +49,13 @@ npm install
 hugo
 ```
 
-这里用到了 npm, 它是 nodejs 自带的包管理软件。你需要首先下载并安装 [nodejs](https://nodejs.org)。
+这里用到了 npm, 它是 nodejs 自带的包管理软件。
+你需要预先下载并安装 [nodejs](https://nodejs.org)。
 
 生成的静态文档网站在 public/ 目录下。
+
+将 public/ 目录下的文件全部复制到 nginx 的 html 目录下，即可在浏览器中进行浏览。
+你需要预先下载并安装 [nginx](http://nginx.org/en/download.html)。
 
 
 ## 使用 PlantUML 绘制 UML 图
