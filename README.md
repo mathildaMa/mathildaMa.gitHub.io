@@ -1,4 +1,4 @@
-# XX 项目文档范例
+# Docsy 技术文档网站范例
 
 [Docsy](https://github.com/google/docsy) 是一个为技术文档网站制作的 Hugo 主题, 
 提供了简便的目录导航、结构及其他。
@@ -9,25 +9,54 @@
 本项目文档示例已发布在 **[https://henry-tech.gitee.io/](https://henry-tech.gitee.io/)**。
 
 
-## 克隆 XX 项目文档
+## 使用范例快速建立您的技术文档网站
+
+通过克隆本范例和子模块，您可以立即建立您的技术文档网站。
+本范例和所有子模块都托管在 gitee.com，所以速度只受限于您的 internet 连接:
 
 ```bash
 git clone --recurse-submodules https://gitee.com/henry-tech/docsy-example.git my-project-docs
+```
+
+
+## 下载 hugo 软件
+
+为了生成静态页面, 您需要下载并使用支持 SCSS 编译的 hugo 版本(hugo_extended_*)。
+
+hugo 的下载页面在 https://github.com/gohugoio/hugo/releases
+
+这是 Windows 版本的下载链接
+https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
+
+
+## 编写和预览
+
+文档源文件在 content/ 目录下；文件可以是 .html 或 .md 后缀。您可以这样一边编写，一边预览文档：
+
+```bash
 cd my-project-docs
 hugo server
 ```
 
-hugo 可以从这里下载
-https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_extended_0.59.1_Windows-64bit.zip
-
 然后您就可以打开浏览器，输入网址 http://localhost:1313/ 查看文档了。
 
 
-如果你想修改和发布 SCSS 样式, 你需要安装 `PostCSS` (运行 `hugo server` 不需要这一步):
+## 产生和发布静态文档网站
 
 ```bash
+cd my-project-docs
 npm install
+hugo
 ```
+
+这里用到了 npm, 它是 nodejs 自带的包管理软件。
+你需要预先下载并安装 [nodejs](https://nodejs.org)。
+
+生成的静态文档网站在 public/ 目录下。
+
+将 public/ 目录下的文件全部复制到 nginx 的 html 目录下，即可在浏览器中进行浏览。
+你需要预先下载并安装 [nginx](http://nginx.org/en/download.html)。
+
 
 ## 使用 PlantUML 绘制 UML 图
 
@@ -55,6 +84,7 @@ npm install
 PlantUML 的详细使用方法见 [http://plantuml.com/zh/](http://plantuml.com/zh/)。
 也可以参考 [PlantUML_Language_Reference_Guide_zh.pdf](example/PlantUML_Language_Reference_Guide_zh.pdf)。
 
+
 ## 使用 mermaid 绘制 UML 图
 
 直接在 .md 文件中书写:
@@ -77,16 +107,18 @@ mermaid 的详细使用方法见 [https://mermaidjs.github.io/](https://mermaidj
 生成的 pdf 中看不到 mermaid 绘制的 UML 图。
 推荐使用 PlantUML 绘制各种图形。
 
+
 ## 生成 pdf 文档
 
-使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具:
+假设文档网站在预览状态下(默认 1313 端口)，可以使用 [wkhtmltopdf](https://wkhtmltopdf.org/) 工具生成 pdf 文档:
 
     wkhtmltopdf --print-media-type --javascript-delay 2000 http://localhost:1313/en/docs/getting-started/ http://localhost:1313/en/docs/getting-started/example-page/ getting-started.pdf
 
-生成的 pdf 效果见 [getting-started.pdf](example/getting-started.pdf)。
+生成的 pdf 效果见 [getting-started.pdf](https://gitee.com/henry-tech/docsy-example/raw/master/example/getting-started.pdf)。
 
 为了等待某些 javascript 运行, 可以修改 --javascript-delay 参数设置等待毫秒数。
 更多参数设置请参考 [https://wkhtmltopdf.org/docs.html](https://wkhtmltopdf.org/docs.html)。
+
 
 # Docsy Example
 
