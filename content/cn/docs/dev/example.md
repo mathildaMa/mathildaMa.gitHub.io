@@ -30,17 +30,11 @@ weight: 10
     @enduml
 </div>
 
-如果你本地有 plantuml server, 可以把 url 替换为本地  plantuml server 地址:
+如果你本地有 plantuml server, 可以在 config.toml 中配置本地  plantuml server 地址:
 
-    <div class="plantuml" url="http://www.plantuml.com/plantuml/img/">
-        @startuml
-        Alice -> Bob: Authentication Request
-        Bob --> Alice: Authentication Response
+    [params]
+    plantuml_url="http://www.plantuml.com/plantuml/svg/"
 
-        Alice -> Bob: Another authentication Request
-        Alice <-- Bob: another authentication Response
-        @enduml
-    </div>
 
 ## mermaid 绘制 UML 图
 

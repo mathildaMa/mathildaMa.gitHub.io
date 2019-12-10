@@ -47,17 +47,10 @@ npm install
 
 ![](example/ex-plantuml.png)
 
-如果你本地有 plantuml server, 可以把 url 替换为本地  plantuml server 地址:
+如果你本地有 plantuml server, 可以在 config.toml 中配置本地  plantuml server 地址:
 
-    <div class="plantuml" url="http://www.plantuml.com/plantuml/img/">
-        @startuml
-        Alice -> Bob: Authentication Request
-        Bob --> Alice: Authentication Response
-
-        Alice -> Bob: Another authentication Request
-        Alice <-- Bob: another authentication Response
-        @enduml
-    </div>
+    [params]
+    plantuml_url="http://www.plantuml.com/plantuml/svg/"
 
 PlantUML 的详细使用方法见 [http://plantuml.com/zh/](http://plantuml.com/zh/)。
 也可以参考 [PlantUML_Language_Reference_Guide_zh.pdf](example/PlantUML_Language_Reference_Guide_zh.pdf)。

@@ -80,6 +80,7 @@ weight = 1
 # Everything below this are Site Params
 
 [params]
+plantuml_url = "http://www.plantuml.com/plantuml/svg/"
 copyright = "何江 @ 南大通用"
 privacy_policy = "https://policies.google.com/privacy"
 
