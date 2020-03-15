@@ -1,5 +1,5 @@
 
 [submodule "themes/docsy"]
 	path = themes/docsy
-	url = https://gitee.com/henry-tech/docsy
+	url = https://gitee.com/docsy/docsy.git
 	branch = offline
